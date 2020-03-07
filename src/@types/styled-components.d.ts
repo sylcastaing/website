@@ -20,9 +20,24 @@ declare module 'styled-components' {
     readonly bold: number;
   }
 
+  export interface FontSizes {
+    readonly titles: {
+      readonly h1: string;
+      readonly h2: string;
+      readonly h3: string;
+    };
+    readonly body: {
+      readonly large: string;
+      readonly standard: string;
+      readonly medium: string;
+      readonly small: string;
+    };
+  }
+
   export interface Font {
     readonly family: string;
     readonly weights: FontWeights;
+    readonly sizes: FontSizes;
   }
 
   export interface BreakPoints {

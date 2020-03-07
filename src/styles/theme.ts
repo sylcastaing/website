@@ -27,6 +27,19 @@ const font: Font = {
     semiBold: 600,
     bold: 700,
   },
+  sizes: {
+    titles: {
+      h1: '48px',
+      h2: '32px',
+      h3: '24px',
+    },
+    body: {
+      large: '20px',
+      standard: '16px',
+      medium: '14px',
+      small: '13px',
+    },
+  },
 };
 
 const theme: DefaultTheme = {

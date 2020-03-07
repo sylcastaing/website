@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { colors, fontWeight } from './utils';
+import { bodyFontSize, colors, fontWeight } from './utils';
 
 export const GlobalStyle = createGlobalStyle`
   /* RESET | meyerweb.com/eric/tools/css/reset | v2.0 | 20110126 */
@@ -64,6 +64,7 @@ export const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     font-family: ${props => props.theme.font.family};
     font-weight: ${fontWeight.regular};
+    font-size: ${bodyFontSize.standard};
   }
 
   *::-moz-focus-inner {
