@@ -4,6 +4,7 @@ import * as Styled from './HomeHeader.styles';
 import { PrismicHomeContent } from '../../model';
 import Hello from './hello/Hello';
 import { renderPrismicElement } from '../../../../core/prismic';
+import Social from './social/Social';
 
 interface HomeHeaderProps {
   content: PrismicHomeContent;
@@ -23,6 +24,7 @@ const HomeHeader: FC<HomeHeaderProps> = ({ content }) => (
       {renderPrismicElement(content.intro, intro => (
         <Styled.HomeHeaderRightContent content={intro} inverted />
       ))}
+      <Social />
     </Styled.HomeHeaderRight>
   </Styled.HomeHeaderContainer>
 );

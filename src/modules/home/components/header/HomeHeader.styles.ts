@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { bodyFontSize, colors } from '../../../../styles/utils';
+import { bodyFontSize, colors, mediaMax } from '../../../../styles/utils';
 import PrismicImage from '../../../../shared/components/prismic/PrismicImage';
 import { Title } from '../../../../styles/shared/titles';
 import RichText from '../../../../shared/components/prismic/RichText';
@@ -9,13 +9,20 @@ export const HomeHeaderContainer = styled.section`
   flex-wrap: wrap;
 `;
 
-export const HomeHeaderLeft = styled.div`
+const HomeHeaderColumn = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 50%;
   min-height: 100vh;
+
+  ${mediaMax.desktop`
+    width: 100%;
+  `};
+`;
+
+export const HomeHeaderLeft = styled(HomeHeaderColumn)`
+  flex-direction: column;
   padding: 20px;
 `;
 
@@ -39,12 +46,8 @@ export const HomeHeaderSubtitle = styled.p`
   font-size: ${bodyFontSize.large};
 `;
 
-export const HomeHeaderRight = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  min-height: 100vh;
+export const HomeHeaderRight = styled(HomeHeaderColumn)`
+  position: relative;
   background-color: ${colors.primary};
   padding: 20px;
 `;
